@@ -87,10 +87,6 @@ export default function Home() {
             <Link href="https://instagram.com/alisa_.wu" target="_blank" className="underline hover:no-underline">instagram</Link>
           </div>
         </section>
-
-        <section className="flex justify-between text-sm font-mono">
-          <Link href="#" className="underline hover:no-underline">made with ❤️</Link>
-        </section>
       </div>
     </div>
   );
