@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Register GSAP plugins
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -18,7 +17,6 @@ export default function Header() {
   useEffect(() => {
     if (!headerRef.current) return;
 
-    // Parallax effect for stars
     const stars = starsRef.current?.children;
     if (stars) {
       Array.from(stars).forEach((star, index) => {
@@ -34,9 +32,8 @@ export default function Header() {
           },
         });
 
-        // Floating animation
         gsap.to(star, {
-          y: "-20px",
+          y: "-10px",
           duration: 2 + index * 0.5,
           repeat: -1,
           yoyo: true,
@@ -87,14 +84,12 @@ export default function Header() {
       if (!headerRef.current || !gradientRef.current) return;
       isHovering.current = true;
       
-      // Nebula color shift effect - more gradual
       gsap.to(gradientRef.current, {
-        background: "linear-gradient(135deg, #4c1d95 0%, #7c3aed 25%, #ec4899 50%,rgb(255, 255, 255) 75%,rgb(6, 85, 212) 100%)",
+        background: "linear-gradient(135deg, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%,rgb(251, 175, 82) 100%)",
         duration: 1.5,
         ease: "power2.inOut",
       });
       
-      // Only change particle opacity, no scaling
       if (stars) {
         Array.from(stars).forEach((star, index) => {
           gsap.to(star, {
@@ -110,14 +105,12 @@ export default function Header() {
       if (!headerRef.current || !gradientRef.current) return;
       isHovering.current = false;
       
-      // Return to original gradient - more gradual
       gsap.to(gradientRef.current, {
         background: "linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%)",
         duration: 1.5,
         ease: "power2.inOut",
       });
-      
-      // Return particles to normal opacity only
+    
       if (stars) {
         Array.from(stars).forEach((star, index) => {
           gsap.to(star, {
@@ -128,7 +121,6 @@ export default function Header() {
         });
       }
       
-      // Remove glow effect
       gsap.to(headerRef.current, {
         boxShadow: "none",
         duration: 1.0,
@@ -154,7 +146,6 @@ export default function Header() {
       className="relative w-full h-80 bg-gradient-to-b from-blue-900 via-purple-800 to-white overflow-hidden perspective-1000 transition-all duration-500"
       style={{ transformStyle: "preserve-3d" }}
     >
-      {/* Animated gradient background */}
       <div
         ref={gradientRef}
         className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-800 via-pink-600 to-white opacity-90"
@@ -163,10 +154,8 @@ export default function Header() {
             "linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%)",
         }}
       />
-      {/* Additional gradient layers for depth */}
       <div className="absolute inset-0 bg-gradient-to-t from-transparent via-purple-900/30 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-transparent to-pink-500/20" />
-      {/* Floating star-shaped particles */}
       <div ref={starsRef} className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
           <div
@@ -181,7 +170,6 @@ export default function Header() {
           />
         ))}
       </div>
-      {/* Glow effect overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-white pointer-events-none" style={{mixBlendMode: "lighten"}} />
     </div>
   );

@@ -5,12 +5,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-black">
-      {/* Header with celestial gradient */}
       <Header />
       
-      {/* Main content */}
       <div className="px-8 py-12 max-w-4xl mx-auto">
-        {/* Hero Section */}
         <section className="mb-12">
           <div className="flex items-center gap-4 mb-4">
             <h1 className="text-5xl font-playfair font-bold tracking-tight">hi!! i&apos;m alisa.</h1>
@@ -18,7 +15,6 @@ export default function Home() {
           <p className="text-lg mb-2 font-mono">i&apos;m 19, currently toronto {'->'} sf</p>
         </section>
 
-        {/* Current Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-playfair font-bold mb-4">CURRENTLY I AM:</h2>
           <ul className="space-y-2 text-base font-mono">
@@ -27,7 +23,7 @@ export default function Home() {
               alt="Zoox"
               width={20}
               height={20}
-              className="rounded-sm inline-block align-middle mx-1"
+              className="rounded-sm inline-block align-middle mx-1 mr-2 grayscale contrast-200"
             />zoox</span> working on the software powering robo-taxis!!</li>
             <li>• frolicking around <span className="underline">sf</span> and soaking up the sunnies 🌟</li>
             <li>• painting <span className="underline">water-colour</span> cards for loved ones</li>
@@ -36,7 +32,6 @@ export default function Home() {
           </ul>
         </section>
 
-        {/* Previous Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-playfair font-bold mb-4">PREVIOUSLY I:</h2>
           <ul className="space-y-2 text-base font-mono">
@@ -45,13 +40,13 @@ export default function Home() {
               alt="Arup"
               width={20}
               height={20}
-              className="rounded-sm inline-block align-middle mx-1"
+              className="rounded-sm inline-block align-middle mx-1 mr-2 grayscale contrast-200"
             />arup</span> and <span className="underline"><Image
               src="/icons/blackberry.jpeg"
               alt="Blackberry"
               width={20}
               height={20}
-              className="rounded-sm inline-block align-middle mx-1"
+              className="rounded-sm inline-block align-middle mx-1 mr-2 grayscale contrast-200"
             />blackberry</span> as a swe</li>
             <li>• led <span className="underline">petmap</span> as a tech lead, a non-profit cross-functional team of pms, designers and devs to build a student therapy dog platform</li>
             <li>• reached level 3 of <span className="underline">improv foundations</span></li>
@@ -60,12 +55,10 @@ export default function Home() {
           </ul>
         </section>
 
-        {/* Looking for Section */}
         <section className="mb-12">
           <p className="text-base font-mono">looking for winter 2026 swe internship opportunities!</p>
         </section>
 
-        {/* Projects Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-playfair font-bold mb-4">SOME PROJECTS:</h2>
           <ul className="space-y-2 text-base font-mono">
@@ -79,7 +72,6 @@ export default function Home() {
           </ul>
         </section>
 
-        {/* Community Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-playfair font-bold mb-4">COMMUNITY:</h2>
           <ul className="space-y-2 text-base font-mono">
@@ -87,17 +79,15 @@ export default function Home() {
           </ul>
         </section>
 
-        {/* Contact Section */}
         <section className="mb-12">
           <div className="flex flex-wrap gap-4 text-base font-mono">
             <Link href="https://www.linkedin.com/in/wu-alisa/" target="_blank" className="underline hover:no-underline">linkedin</Link>
-            <Link href="https://github.com/areuie" target="_blank" className="underline hover:no-underline">github</Link>
             <Link href="https://x.com/_alisawu" target="_blank" className="underline hover:no-underline">twitter</Link>
-            <Link href="mailto:alisa.wu@uwaterloo.ca" className="underline hover:no-underline">email</Link>
+            <Link href="https://github.com/areuie" target="_blank" className="underline hover:no-underline">github</Link>
+            <Link href="https://instagram.com/alisa_.wu" target="_blank" className="underline hover:no-underline">instagram</Link>
           </div>
         </section>
 
-        {/* Footer */}
         <section className="flex justify-between text-sm font-mono">
           <Link href="#" className="underline hover:no-underline">made with ❤️</Link>
         </section>
